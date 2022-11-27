@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react'
+import { movieData } from './data';
+import MovieList from './Component/MovieList'
+import NewMovie from './Component/NewMovie';
+import Filter from './Filter';
 
 function App() {
+  const [list, setList] = useState(movieData)
+  const [textFilter, setTextFilter] = useState("")
+  const [ratingFilter, setRatingFilter] = useState(0)
+  const handleFilterText=(y)=>setTextFilter(y)
+  const handleFilterRating=(z)=>setRatingFilter(z)
+  const handleDelete=(movieId)=>{
+    setList(list.filter(el=>el.id!==movieId))
+  }
+  const handleAdd=(NewMovieTik)=>setList([...list,NewMovieTik])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Filter textFilter={textFilter} ratingFilter={ratingFilter} handleFilterText={handleFilterText} handleFilterRating={handleFilterRating}/>
+    <MovieList Data={list.filter(el=>el.name.toLocaleLowerCase().includes(textFilter.toLocaleLowerCase())&&el.rating>=ratingFilter)} handleDelete={handleDelete}/>
+    <NewMovie handleAdd={handleAdd}/>
     </div>
   );
 }
