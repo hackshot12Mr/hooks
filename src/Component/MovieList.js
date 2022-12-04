@@ -1,10 +1,18 @@
 import React from 'react'
+import { movieData } from '../data'
 import MovieCard from './MovieCard'
-const MovieList = ({Data, handleDelete}) => {
+const MovieList = ({handleDelete , list}) => {
+  // console.log(list);
   return (
+    
     <div className='movie-list'>{
-        Data.map((el,i)=><MovieCard key={i} movie={el} handleDelete={handleDelete}/>)
-        }</div>
+      
+      list.map((el,i)=><MovieCard key={i} movie={el} handleDelete={handleDelete}/>)
+        
+      }
+        
+      
+        </div>
   )
 }
 

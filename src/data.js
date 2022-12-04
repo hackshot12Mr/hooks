@@ -5,6 +5,8 @@ export const movieData = [
         rating: 5,
         name: "Stranger Things",
         data: "15/7/2016",
+        bio: " this is trailer stranger things",
+        trailer: "https://www.youtube.com/embed/yQEondeGvKo",
     },
     {
         id: Math.random(),
@@ -12,6 +14,8 @@ export const movieData = [
         rating: 5,
         name : "Moon Knight",
         data: "30/3/2022",
+        bio: "this is trailer moon knight",
+        trailer: "https://www.youtube.com/embed/ZPCJvTq9wiU",
     },
     {
         id: Math.random(),
@@ -19,6 +23,8 @@ export const movieData = [
         rating: 4,
         name: "Peaky blinders",
         data: "13/11/2013",
+        bio: "this is trailer peaky bliender",
+        trailer: "https://www.youtube.com/embed/QlU-5RsnYTk",
     },
     {
         id: Math.random(),
@@ -26,6 +32,9 @@ export const movieData = [
         rating: 3,
         name: "Thor love and thunder",
         data: "6/7/2022",
+        bio: "this is trailer thor 4",
+        trailer: "https://www.youtube.com/embed/Go8nTmfrQd8",
+
     },
     {
         id: Math.random(),
@@ -33,6 +42,8 @@ export const movieData = [
         rating: 2,
         name: "Black Panther: Wakanda Forever",
         data: "11/12/2022",
+        bio: "this is trailer black panther",
+        trailer: "https://www.youtube.com/embed/_Z3QKkl1WyM",
     }
 
  
